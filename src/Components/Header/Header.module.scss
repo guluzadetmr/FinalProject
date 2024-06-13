@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .containerfirst {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px;
+    .containerup {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 87%;
+      min-height: 57px;
+      border-bottom: 2px solid #dedede;
+      padding-right: 20px;
+      padding-left: 3px;
+      nav {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 23%;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-decoration: none;
+          width: 100%;
+          list-style-type: none;
+          gap: 10px;
+          li a {
+            text-decoration: none;
+            display: flex;
+            font-family: "Montserrat" sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #bebebe;
+            letter-spacing: 1px;
+            // transition: 0.3s;
+            &:hover {
+              color: rgb(217, 29, 75);
+            }
+          }
+        }
+      }
+      .icons {
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 22px;
+        border-radius: 100px;
+        color: #e7eaed;
+        border-color: #e7eaed;
+        gap: 10px;
+
+        .iconsborder {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+          border: 1px solid #e7eaed;
+          border-radius: 100px;
+        }
+      }
+    }
+    .containerbottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 87%;
+      min-height: 93px;
+      padding-top: 10px;
+      .logo {
+        width: 13%;
+
+        img {
+          width: 180px;
+        }
+      }
+      .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        gap: 15px;
+        img {
+          width: 20px;
+          
+        }
+        .except {
+          display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #cecece;
+        border-radius: 100px;
+        padding: 5px 32px;
+      img {
+        width: 20px;
+        
+      }
+h1 {
+font-family: 'Montserrat' sans-serif;
+font-size:15px ;
+font-weight: 600;
+}
+        }
+      }
+    }
+  }
+}

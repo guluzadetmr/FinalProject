@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 import { GrFacebookOption } from "react-icons/gr";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
+import { FaSearch } from "react-icons/fa";
 const SearchBox = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -16,12 +16,12 @@ const SearchBox = () => {
     <div className="search-box">
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Axtar.."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button type="submit" onClick={handleSearch}>
-        Search
+        <FaSearch />
       </button>
     </div>
   );
@@ -30,12 +30,12 @@ const SearchBox = () => {
 const Header = () => {
   return (
     <div className={styles.first}>
-      <div className={styles.container}>
+      <div className={styles.containerfirst}>
         <div className={styles.containerup}>
           <nav>
             <ul>
               <li>
-                <a href="">ANA SƏHİFƏ</a>
+                <a href="">Ana Səhifə</a>
               </li>
               <li>
                 <a href="">Kataloq</a>
@@ -49,9 +49,15 @@ const Header = () => {
             </ul>
           </nav>
           <div className={styles.icons}>
-            <GrFacebookOption />
-            <FaInstagram />
-            <FaYoutube />
+            <div className={styles.iconsborder}>
+              <GrFacebookOption />
+            </div>
+            <div className={styles.iconsborder}>
+              <FaInstagram />
+            </div>
+            <div className={styles.iconsborder}>
+              <FaYoutube />
+            </div>
           </div>
         </div>
         <div className={styles.containerbottom}>
@@ -64,7 +70,8 @@ const Header = () => {
           <div className={styles.images}>
             <img src="https://mstore.az/public/img/icon/like.svg" alt="" />
             <div className={styles.except}>
-           <h1>Səbətim</h1> <img src="https://mstore.az/public/img/icon/cart.svg" alt="" /> 
+              <h1>Səbətim</h1>
+              <img src="https://mstore.az/public/img/icon/cart.svg" alt="" />
             </div>
           </div>
         </div>
