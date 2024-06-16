@@ -1,0 +1,124 @@
+// .sliderContainer {
+//         position: relative;
+//         width: 100%;
+//         // max-width: 100%;
+//         padding-bottom: 40px;
+//       }
+//       
+//       .slideItem {
+//         position: relative;
+//       }
+//       
+//       .image {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover; /* Görüntüyü tamamen sığdır */
+//         
+//       }
+//       
+//       .customDots {
+//         position: absolute;
+//         bottom: 10px;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         display: flex;
+//         justify-content: center;
+//         list-style: none;
+//         padding: 0;
+//         margin: 0;
+//         width: 100%;
+//         
+//       }
+//       
+//       .customDots ul {
+//         display: flex;
+//         padding: 0;
+//         margin: 0;
+//         
+//       }
+//       
+//       .dot {
+//         width: 20px; /* Düz çizgi genişliği */
+//         height: 5px; /* Düz çizgi yüksekliği */
+//         background-color: black; /* Çizgi rengi */
+//         margin: 0 5px; /* Çizgiler arası boşluk */
+//         cursor: pointer; /* İstemcilere tıklama özelliği ekle */
+//       }
+//       
+//       .customDots li:nth-child(1) .dot {
+//         background-color: black;
+//          /* Aktif çizgi rengi - 1. çizgi */
+//       }
+//       
+//       .customDots li:nth-child(2) .dot {
+//         background-color: black; /* Aktif çizgi rengi - 2. çizgi */
+//      
+//     }
+//       
+//       .customDots li:nth-child(3) .dot {
+//         background-color: black; /* Aktif çizgi rengi - 3. çizgi */
+//       
+//     }
+//       
+//       .customDots li:nth-child(4) .dot {
+//         background-color: black; /* Aktif çizgi rengi - 4. çizgi */
+//       
+//     }
+//       
+//       .customDots li:nth-child(5) .dot {
+//         background-color: black; /* Aktif çizgi rengi - 5. çizgi */
+    
+//     }
+//       
+//       .customDots li:nth-child(6) .dot {
+//         background-color: black; /* Aktif çizgi rengi - 6. çizgi */
+//       
+//     }
+.sliderContainer {
+     position: relative;
+     width: 100%;
+     padding-bottom: 40px; 
+     .slideItem {
+     position: relative;
+    }
+    }
+    
+   
+    
+    .image {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+    }
+    
+    .customDots {
+     position: absolute;
+     bottom: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     display: flex;
+     justify-content: center;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     width: 100%;
+    }
+    
+    .customDots ul {
+     display: flex;
+     padding: 0;
+     margin: 0;
+    }
+    
+    .dot {
+     width: 20px;
+    height: 5px;
+     background-color: gray; /* Default dot color */
+    margin: 0 5px;
+    cursor: pointer;
+    }
+    
+    .customDots .slick-active .dot {
+     background-color: black; /* Active dot color */
+    }
+    
