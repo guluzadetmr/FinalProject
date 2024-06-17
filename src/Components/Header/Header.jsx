@@ -4,30 +4,19 @@ import { GrFacebookOption } from "react-icons/gr";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const SearchBox = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = () => {
-    // Perform search logic here (e.g., fetch data based on searchTerm)
     console.log("Search term:", searchTerm);
   };
 
-  return (
-    <div className="search-box">
-      <input
-        type="text"
-        placeholder="Axtar.."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button type="submit" onClick={handleSearch}>
-        <FaSearch />
-      </button>
-    </div>
-  );
+  return <div></div>;
 };
 
 const Header = () => {
+  const navigation = useNavigate();
   return (
     <div className={styles.first}>
       <div className={styles.containerfirst}>
@@ -35,16 +24,28 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <a href="">Ana Səhifə</a>
+                <a href="" onClick={() => navigation("/")}>
+                  Ana Səhifə
+                </a>
               </li>
               <li>
                 <a href="">Kataloq</a>
               </li>
               <li>
-                <a href="">Haqqımızda</a>
+                <a href="" onClick={() => navigation("/About Us")}>
+                  Haqqımızda
+                </a>
               </li>
               <li>
-                <a href="">Əlaqə</a>
+                <a href="" onClick={() => navigation("/Contact")}>
+                  Əlaqə
+                </a>
+              </li>
+              <li>
+                <a href="">Login</a>
+              </li>
+              <li>
+                <a href="">Register</a>
               </li>
             </ul>
           </nav>
@@ -65,7 +66,8 @@ const Header = () => {
             <img src="https://mstore.az/public/img/newLogohead.png" alt="" />
           </div>
           <div className={styles.search}>
-            <SearchBox />
+            <input type="text" placeholder="axtar" />
+            <FaSearch  className={styles.searchinput}/>
           </div>
           <div className={styles.images}>
             <img src="https://mstore.az/public/img/icon/like.svg" alt="" />

@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.contactformcontainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    background-color: #F9F9F9;
+  h2 {
+    text-align: start;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  .contactform {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    input  , .inputMsg {
+        border: none;
+        height: 34px;
+        border: none;
+        outline: none;
+        resize: vertical;
+        border-bottom: 1px solid grey;
+    }
+    .formrow {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      gap: 20px;
+      width: 90%;
+      input {
+        border: none;
+        width: 50%;
+        height: 34px;
+        border: none;
+        outline: none;
+        resize: vertical;
+        border-bottom: 1px solid grey;
+      
+      }
+    }
+  }
+}
+
+.contactform input,
+.contactform textarea {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  outline: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.contactform button {
+  padding: 15px 20px;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 10%;
+  &:hover {
+    background-color: #c9302c;
+  }
+}
