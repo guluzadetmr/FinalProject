@@ -12,7 +12,7 @@ const SearchBox = () => {
     console.log("Search term:", searchTerm);
   };
 
-  return <div></div>;
+  // return <div></div>;
 };
 
 const Header = () => {
@@ -66,8 +66,10 @@ const Header = () => {
             <img src="https://mstore.az/public/img/newLogohead.png" alt="" />
           </div>
           <div className={styles.search}>
-            <input type="text" placeholder="axtar" />
-            <FaSearch  className={styles.searchinput}/>
+            <input type="text" placeholder="Axtar.." />
+            <div className={styles.searchIcn}>
+              <FaSearch className={styles.searchinput} />
+            </div>
           </div>
           <div className={styles.images}>
             <img src="https://mstore.az/public/img/icon/like.svg" alt="" />
