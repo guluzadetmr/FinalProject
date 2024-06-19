@@ -9,19 +9,18 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 950px;
+  height: 1410px;
   margin: 0;
   padding: 0;
   overflow: hidden;
   flex-direction: column;
   background-color: #f9f9f9;
-  
+
   .containerContacts {
     width: 100%;
     height: 100%;
     .border {
       width: 100%;
-      // height: 400px;
     }
   }
   .contactformcontainer {
@@ -35,8 +34,12 @@
     min-height: 600px;
     h2 {
       text-align: start;
-      margin-bottom: 20px;
       width: 100%;
+      font-family: "Montserrat" sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 40px;
+      color: rgb(33, 37, 41);
     }
 
     .contactform {
@@ -49,17 +52,17 @@
       input,
       .inputMsg {
         border: none;
-        height: 40px;
+        height: 50px;
         outline: none;
         resize: vertical;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid #cecece;
       }
 
       .formrow {
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
-        gap: 20px;
+        gap: 30px;
         width: 100%;
 
         input {
@@ -68,20 +71,62 @@
           height: 40px;
           outline: none;
           resize: vertical;
-          border-bottom: 1px solid grey;
+          border-bottom: 1px solid #cecece;
         }
       }
       button {
         padding: 15px 20px;
-        background-color: #d9534f;
+        background-color: rgb(220, 53, 69);
         color: #fff;
         border: none;
         border-radius: 100px;
         cursor: pointer;
         width: 10%;
+        font-family: "Montserrat" sans-serif;
+        font-size: 16px;
+        font-weight: 400;
 
         &:hover {
-          background-color: #c9302c;
+          background-color: #a71d2a;
+        }
+      }
+    }
+  }
+  .contactInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid grey;
+    background-color: white;
+   
+    .contactItem {
+      width: 87%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 15px;
+
+      .contactIcon {
+        margin-bottom: 30px;
+        color: #dc3545;
+      }
+      .details {
+        font-weight: 400;
+        font-size: 15px;
+        color: #292929;
+        text-align: center;
+        line-height: 23px;
+        cursor: pointer;
+        &:hover{
+          color:  rgb(217, 29, 75);
+        }
+        div {
+          &:hover {
+            color: rgb(217, 29, 75);
+          }
         }
       }
     }
@@ -92,10 +137,9 @@
 .contactform textarea {
   width: 100%;
   padding: 10px;
-  border: none;
   outline: hidden;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #cecece;
 }
 
 .contactform button[type="submit"] {
