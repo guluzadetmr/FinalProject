@@ -3,18 +3,22 @@
   margin: 0;
   padding: 0;
 }
+
 .searchbox {
   width: 100%;
+
   input {
     height: 40px;
     width: 100%;
   }
 }
+
 .first {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 87%;
+  margin: 0 auto;
 
   .containerfirst {
     width: 100%;
@@ -23,15 +27,17 @@
     flex-direction: column;
     align-items: center;
     min-height: 150px;
+
     .containerup {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 87%;
+      width: 100%;
       min-height: 57px;
       border-bottom: 2px solid #dedede;
       padding-right: 20px;
       padding-left: 3px;
+
       nav {
         display: flex;
         justify-content: start;
@@ -45,6 +51,7 @@
           text-decoration: none;
           width: 100%;
           list-style-type: none;
+
           li a {
             text-decoration: none;
             display: flex;
@@ -60,6 +67,7 @@
           }
         }
       }
+
       .icons {
         width: 10%;
         display: flex;
@@ -79,6 +87,7 @@
           border: 1px solid #e7eaed;
           border-radius: 100px;
           cursor: pointer;
+
           &:hover {
             border-color: #1777cf;
             color: #d91d4b;
@@ -86,11 +95,12 @@
         }
       }
     }
+
     .containerbottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 87%;
+      width: 100%;
       min-height: 93px;
 
       .search {
@@ -99,6 +109,7 @@
         justify-content: end;
         width: 50%;
         height: 50px;
+
         input {
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
@@ -109,6 +120,7 @@
           padding-left: 10px;
           border: 1px solid #06447ea9;
         }
+
         .searchIcn {
           height: 45px;
           padding: 10px;
@@ -117,17 +129,19 @@
           font-size: 35px;
           color: white;
           background-color: #d91d4b;
-          width:13%;
+          width: 13%;
           display: flex;
-            justify-content: center;
-            align-items: center;
+          justify-content: center;
+          align-items: center;
+
           .searchinput {
             width: 18px;
             height: 45px;
-            
+
           }
         }
       }
+
       input::placeholder {
         font-size: 17px;
       }
@@ -136,10 +150,12 @@
         width: 18%;
         padding-top: 10px;
         padding-left: 5px;
+
         img {
           width: 175px;
         }
       }
+
       .images {
         display: flex;
         justify-content: center;
@@ -148,9 +164,11 @@
         gap: 10px;
         padding-bottom: 5px;
         padding-left: 30px;
+
         img {
           width: 20px;
         }
+
         .except {
           display: flex;
           justify-content: space-between;
@@ -158,9 +176,11 @@
           border: 1px solid #cecece;
           border-radius: 100px;
           padding: 5px 32px;
+
           img {
             width: 20px;
           }
+
           h1 {
             font-family: "Montserrat" sans-serif;
             font-size: 15px;
