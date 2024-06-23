@@ -1,0 +1,109 @@
+@import "../Computers/Computers.module.scss";
+
+.comp {
+  @extend .comp !optional ;
+
+  .containerComp {
+    @extend .containerComp !optional ;
+
+    .foe {
+      @extend .foe !optional ;
+
+      .word {
+        @extend .word !optional ;
+
+        h1 {
+          @extend h1 !optional ;
+        }
+      }
+
+      .picture {
+        @extend .picture !optional ;
+
+        img {
+          @extend img !optional ;
+        }
+      }
+    }
+  }
+}
+
+.categoryDropdown {
+  @extend .categoryDropdown !optional ;
+
+  .containerAll {
+    @extend .containerAll !optional ;
+
+    .containerDown {
+      @extend .containerDown !optional ;
+
+      .categoryTitle {
+        @extend .categoryTitle !optional ;
+      }
+
+      .down {
+        @extend .down !optional ;
+      }
+    }
+
+    .dropdownMenu {
+      @extend .dropdownMenu !optional ;
+
+      li {
+        @extend li !optional ;
+
+        a {
+          @extend a !optional ;
+        }
+      }
+    }
+
+    .nav {
+      @extend .nav !optional ;
+
+      ul {
+        @extend ul !optional ;
+
+        li {
+          @extend li !optional ;
+
+          a {
+            @extend a !optional ;
+          }
+        }
+      }
+    }
+
+    .endirimdeContainer {
+      @extend .endirimdeContainer !optional ;
+
+      .blankIcon {
+        @extend .blankIcon !optional ;
+      }
+
+      .checkIcon {
+        @extend .checkIcon !optional ;
+      }
+
+      .endirimdeText {
+        @extend .endirimdeText !optional ;
+      }
+    }
+  }
+}
+
+.productList {
+  @extend .productList !optional ;
+
+  .product {
+    @extend .product !optional ;
+
+    h3 {
+      @extend h3 !optional ;
+    }
+
+    p {
+      @extend p !optional ;
+    }
+  }
+}

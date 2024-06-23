@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../Components/Header/Header";
-import Advantages from "../../Components/Advantages/Advantages";
 import Dropdowns from "../../Components/Dropdowns/Dropdowns";
+import Advantages from "../../Components/Advantages/Advantages";
 import Footer from "../../Components/Footer/Footer";
-import styles from "./Catalog.module.scss";
 import { FaAngleDown, FaCheckSquare } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
+import styles from "./Computers.module.scss";
 
-const Catalog = () => {
+const Computers = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activeNav, setActiveNav] = useState("");
   const [activeEndirimde, setActiveEndirimde] = useState(false);
   const [products, setProducts] = useState([]);
 
   const categories = [
-    "KOMPUTERLƏR",
-    "KOMPUTER HİSSƏLƏRİ",
-    "ŞƏBƏKƏ AVADANLIQLARI",
-    "MƏİŞƏT TEXNİKASI",
-    "TELEFONLAR",
-    "PLANŞETLƏR",
-    "DİGƏR",
+    "Masaüstü kompüterlər",
+    "Notebook və netbooklar",
+    "MacBooklar",
+    "Monobloklar",
   ];
 
   const navItems = [
@@ -59,6 +56,21 @@ const Catalog = () => {
     <div>
       <Header />
       <Dropdowns />
+      <div className={styles.comp}>
+        <div className={styles.containerComp}>
+          <div className={styles.foe}>
+            <div className={styles.word}>
+              <h1>KOMPÜTERLƏR</h1>
+            </div>
+            <div className={styles.picture}>
+              <img
+                src="https://mstore.az/upload/category/Komp%C3%BCterl%C9%99r%201.png"
+                alt="Kompüterlər"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={styles.categoryDropdown}>
         <div className={styles.containerAll}>
           <div className={styles.containerDown} onClick={toggleDropdown}>
@@ -90,12 +102,13 @@ const Catalog = () => {
             </ul>
           </nav>
           <div className={styles.endirimdeContainer} onClick={handleEndirimdeClick}>
-            {activeEndirimde ? (
+         <span className={styles.endirimdeText}>Endirim</span>  
+          {activeEndirimde ? (
               <FaCheckSquare className={styles.checkIcon} />
             ) : (
               <MdCheckBoxOutlineBlank className={styles.blankIcon} />
             )}
-            <span className={styles.endirimdeText}>Endirimdə</span>
+            
           </div>
         </div>
       </div>
@@ -108,11 +121,10 @@ const Catalog = () => {
           </div>
         ))}
       </div>
-
       <Advantages />
       <Footer />
     </div>
   );
 };
 
-export default Catalog;
+export default Computers;

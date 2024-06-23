@@ -11,7 +11,33 @@ const Header = () => {
   const handleSearch = () => {
     console.log("Search term:", searchTerm);
   };
-  
+
+  const [wishlistCount, setWishlistCount] = useState(0);
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleWishlistClick = () => {
+    navigation("/Wishlist");
+  };
+
+  const handleCartClick = () => {
+    navigation("/Cart");
+  };
+  const handleLogoClick = () => {
+    navigation("/");
+  };
+
+  const handleFacebookClick = () => {
+    window.open("https://www.facebook.com/www.mstore.az", "_blank");
+  };
+
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com/mstore.az/", "_blank");
+  };
+
+  const handleYoutubeClick = () => {
+    window.open("https://www.youtube.com/", "_blank");
+  };
+
   return (
     <div className={styles.first}>
       <div className={styles.containerfirst}>
@@ -24,7 +50,9 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="#" onClick={() => navigation('/Catalog')}>Kataloq</a>
+                <a href="#" onClick={() => navigation("/Catalog")}>
+                  Kataloq
+                </a>
               </li>
               <li>
                 <a href="#" onClick={() => navigation("/About Us")}>
@@ -37,28 +65,35 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="#" onClick={() => navigation('/Login')}>Login</a>
+                <a href="#" onClick={() => navigation("/Login")}>
+                  Login
+                </a>
               </li>
               <li>
-                <a href="#" onClick={() => navigation('/Register')}>Register</a>
+                <a href="#" onClick={() => navigation("/Register")}>
+                  Register
+                </a>
               </li>
             </ul>
           </nav>
           <div className={styles.icons}>
-            <div className={styles.iconsborder}>
+            <div className={styles.iconsborder} onClick={handleFacebookClick}>
               <GrFacebookOption />
             </div>
-            <div className={styles.iconsborder}>
+            <div className={styles.iconsborder} onClick={handleInstagramClick}>
               <FaInstagram />
             </div>
-            <div className={styles.iconsborder}>
+            <div className={styles.iconsborder} onClick={handleYoutubeClick}>
               <FaYoutube />
             </div>
           </div>
         </div>
         <div className={styles.containerbottom}>
-          <div className={styles.logo}>
-            <img src="https://mstore.az/public/img/newLogohead.png" alt="Logo" />
+          <div className={styles.logo} onClick={handleLogoClick}>
+            <img
+              src="https://mstore.az/public/img/newLogohead.png"
+              alt="Logo"
+            />
           </div>
           <div className={styles.search}>
             <input
@@ -73,10 +108,22 @@ const Header = () => {
             </div>
           </div>
           <div className={styles.images}>
-            <img src="https://mstore.az/public/img/icon/like.svg" alt="Like" />
-            <div className={styles.except}>
+            <div className={styles.likeContainer} onClick={handleWishlistClick}>
+              <img
+                src="https://mstore.az/public/img/icon/like.svg"
+                alt="Like"
+                className={styles.likeIcon}
+              />
+              <div className={styles.wishlistCount}>{wishlistCount}</div>
+            </div>
+            <div className={styles.except} onClick={handleCartClick}>
               <h1>Səbətim</h1>
-              <img src="https://mstore.az/public/img/icon/cart.svg" alt="Cart" />
+              <img
+                src="https://mstore.az/public/img/icon/cart.svg"
+                alt="Cart"
+                className={styles.cartIcon}
+              />
+              <div className={styles.cartCount}>{cartCount}</div>
             </div>
           </div>
         </div>

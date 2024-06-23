@@ -1,26 +1,31 @@
-import React, { useState, useEffect } from "react";
-import Header from "../../Components/Header/Header";
-import Advantages from "../../Components/Advantages/Advantages";
-import Dropdowns from "../../Components/Dropdowns/Dropdowns";
-import Footer from "../../Components/Footer/Footer";
-import styles from "./Catalog.module.scss";
+import React, { useState } from 'react';
+import Header from '../../Components/Header/Header';
+import Dropdowns from '../../Components/Dropdowns/Dropdowns';
+import Advantages from '../../Components/Advantages/Advantages';
+import Footer from '../../Components/Footer/Footer';
+import styles from './Household.module.scss'; 
 import { FaAngleDown, FaCheckSquare } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 
-const Catalog = () => {
+const Household = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activeNav, setActiveNav] = useState("");
   const [activeEndirimde, setActiveEndirimde] = useState(false);
   const [products, setProducts] = useState([]);
 
   const categories = [
-    "KOMPUTERLƏR",
-    "KOMPUTER HİSSƏLƏRİ",
-    "ŞƏBƏKƏ AVADANLIQLARI",
-    "MƏİŞƏT TEXNİKASI",
-    "TELEFONLAR",
-    "PLANŞETLƏR",
-    "DİGƏR",
+    "Kondisioner",
+    "Soyuducu",
+    "Paltaryuyan",
+    "Televizor",
+    "Çaydanlar",
+    "Kofe üyüdənlər",
+    "Şirə çəkənlər",
+    "Tozsoran",
+    "Digər elektrikli avadanlıqlar",
+    "Qaz sobaları",
+    "Qaz plitələri",
+    "Aspiratorlar",
   ];
 
   const navItems = [
@@ -36,29 +41,38 @@ const Catalog = () => {
   const handleNavClick = (value) => {
     setActiveNav(value);
     fetch(`https://api.example.com/products?filter=${value}`)
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching data:", error));
   };
-
-  useEffect(() => {
-    if (activeNav) {
-      handleNavClick(activeNav);
-    }
-  }, [activeNav]);
 
   const handleEndirimdeClick = () => {
     setActiveEndirimde(!activeEndirimde);
     fetch(`https://api.example.com/products?discount=true`)
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching data:", error));
   };
 
   return (
     <div>
       <Header />
       <Dropdowns />
+      <div className={styles.house}>
+        <div className={styles.containerHouse}>
+          <div className={styles.foe}>
+            <div className={styles.word}>
+              <h1>MƏİŞƏT TEXNİKASI</h1>
+            </div>
+            <div className={styles.picture}>
+              <img
+                src="https://mstore.az/upload/category/meiset.png"
+                alt="MƏİŞƏT TEXNİKASI"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={styles.categoryDropdown}>
         <div className={styles.containerAll}>
           <div className={styles.containerDown} onClick={toggleDropdown}>
@@ -108,11 +122,11 @@ const Catalog = () => {
           </div>
         ))}
       </div>
-
       <Advantages />
       <Footer />
     </div>
   );
 };
 
-export default Catalog;
+export default Household;
+

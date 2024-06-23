@@ -1,26 +1,33 @@
-import React, { useState, useEffect } from "react";
-import Header from "../../Components/Header/Header";
-import Advantages from "../../Components/Advantages/Advantages";
-import Dropdowns from "../../Components/Dropdowns/Dropdowns";
-import Footer from "../../Components/Footer/Footer";
-import styles from "./Catalog.module.scss";
+import React, { useState } from 'react';
+import Header from '../../Components/Header/Header';
+import Dropdowns from '../../Components/Dropdowns/Dropdowns';
+import Advantages from '../../Components/Advantages/Advantages';
+import Footer from '../../Components/Footer/Footer';
+import styles from './Equipment.module.scss'; 
 import { FaAngleDown, FaCheckSquare } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 
-const Catalog = () => {
+const Equipment = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activeNav, setActiveNav] = useState("");
   const [activeEndirimde, setActiveEndirimde] = useState(false);
   const [products, setProducts] = useState([]);
 
   const categories = [
-    "KOMPUTERLƏR",
-    "KOMPUTER HİSSƏLƏRİ",
-    "ŞƏBƏKƏ AVADANLIQLARI",
-    "MƏİŞƏT TEXNİKASI",
-    "TELEFONLAR",
-    "PLANŞETLƏR",
-    "DİGƏR",
+    "Router və Modemlər",
+    "Switch",
+    "Access Point",
+    "Firewall",
+    "Network Attached",
+    "Storage (NAS)",
+    "Network Interface Card",
+    "(NIC)",
+    "Server",
+    "Patch Panel",
+    "Patch Cord",
+    "Cabinet",
+    "Parts",
+    "Wifi Extender"
   ];
 
   const navItems = [
@@ -36,29 +43,38 @@ const Catalog = () => {
   const handleNavClick = (value) => {
     setActiveNav(value);
     fetch(`https://api.example.com/products?filter=${value}`)
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching data:", error));
   };
-
-  useEffect(() => {
-    if (activeNav) {
-      handleNavClick(activeNav);
-    }
-  }, [activeNav]);
 
   const handleEndirimdeClick = () => {
     setActiveEndirimde(!activeEndirimde);
     fetch(`https://api.example.com/products?discount=true`)
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching data:", error));
   };
 
   return (
     <div>
       <Header />
       <Dropdowns />
+      <div className={styles.comp}>
+        <div className={styles.containerComp}>
+          <div className={styles.foe}>
+            <div className={styles.word}>
+              <h1>ŞƏBƏKƏ AVADANLIQLARI</h1>
+            </div>
+            <div className={styles.picture}>
+              <img
+                src="https://mstore.az/upload/category/sebek1.png"
+                alt="Avadanlıq"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={styles.categoryDropdown}>
         <div className={styles.containerAll}>
           <div className={styles.containerDown} onClick={toggleDropdown}>
@@ -108,11 +124,10 @@ const Catalog = () => {
           </div>
         ))}
       </div>
-
       <Advantages />
       <Footer />
     </div>
   );
 };
 
-export default Catalog;
+export default Equipment;
