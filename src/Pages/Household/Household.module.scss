@@ -1,9 +1,9 @@
 @import "../Computers/Computers.module.scss";
 
-.house {
+.household {
   @extend .comp;
 
-  .containerHouse {
+  .containerComp {
     @extend .containerComp;
 
     .foe {

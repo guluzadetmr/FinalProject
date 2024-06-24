@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import Header from '../../Components/Header/Header';
-import Dropdowns from '../../Components/Dropdowns/Dropdowns';
-import Advantages from '../../Components/Advantages/Advantages';
-import Footer from '../../Components/Footer/Footer';
-import styles from './Others.module.scss';
+import React, { useState, useEffect } from "react";
+import Header from "../../Components/Header/Header";
+import Dropdowns from "../../Components/Dropdowns/Dropdowns";
+import Advantages from "../../Components/Advantages/Advantages";
+import Footer from "../../Components/Footer/Footer";
 import { FaAngleDown, FaCheckSquare } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
+import styles from "./Others.module.scss";
+import ProductCard from "../ProductCard/ProductCard";
 
 const Others = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -44,17 +45,23 @@ const Others = () => {
   const handleNavClick = (value) => {
     setActiveNav(value);
     fetch(`https://api.example.com/products?filter=${value}`)
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching data:", error));
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error('Error fetching data:', error));
   };
+
+  useEffect(() => {
+    if (activeNav) {
+      handleNavClick(activeNav);
+    }
+  }, [activeNav]);
 
   const handleEndirimdeClick = () => {
     setActiveEndirimde(!activeEndirimde);
     fetch(`https://api.example.com/products?discount=true`)
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching data:", error));
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error('Error fetching data:', error));
   };
 
   return (
@@ -78,52 +85,58 @@ const Others = () => {
       </div>
       <div className={styles.categoryDropdown}>
         <div className={styles.containerAll}>
-          <div className={styles.containerDown} onClick={toggleDropdown}>
-            <span className={styles.categoryTitle}>Kateqoriyalar</span>
-            <FaAngleDown className={styles.down} onClick={toggleDropdown} />
-          </div>
-          {dropdownOpen && (
-            <ul className={styles.dropdownMenu}>
-              {categories.map((category, index) => (
-                <li key={index}>
-                  <a href="#">{category}</a>
-                </li>
-              ))}
-            </ul>
-          )}
-          <nav className={styles.nav}>
-            <ul>
-              {navItems.map((item, index) => (
-                <li key={index}>
-                  <a
-                    href="#"
-                    className={activeNav === item.value ? styles.active : ""}
-                    onClick={() => handleNavClick(item.value)}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className={styles.endirimdeContainer} onClick={handleEndirimdeClick}>
-            {activeEndirimde ? (
-              <FaCheckSquare className={styles.checkIcon} />
-            ) : (
-              <MdCheckBoxOutlineBlank className={styles.blankIcon} />
+          <div className={styles.container} onClick={toggleDropdown}>
+            <div className={styles.containerDown}>
+              <span className={styles.categoryTitle}>Kateqoriyalar</span>
+              <FaAngleDown className={styles.down} onClick={toggleDropdown} />
+            </div>
+            {dropdownOpen && (
+              <ul className={styles.dropdownMenu}>
+                {categories.map((category, index) => (
+                  <li key={index}>
+                    <a href="#">{category}</a>
+                  </li>
+                ))}
+              </ul>
             )}
-            <span className={styles.endirimdeText}>Endirimdə</span>
+            <div className={styles.search_btn}>
+              <button>Axtar</button>
+            </div>
+          </div>
+
+          <div className={styles.left}>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <nav className={styles.nav}>
+                <ul>
+                  {navItems.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href="#"
+                        className={activeNav === item.value ? styles.active : ""}
+                        onClick={() => handleNavClick(item.value)}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <div className={styles.endirimdeContainer} onClick={handleEndirimdeClick}>
+                <span className={styles.endirimdeText}>Endirimdə</span>
+                {activeEndirimde ? (
+                  <FaCheckSquare className={styles.checkIcon} />
+                ) : (
+                  <MdCheckBoxOutlineBlank className={styles.blankIcon} />
+                )}
+              </div>
+            </div>
+            <div className={styles.productList}>
+              {products?.map((product) => (
+                <ProductCard data={product} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className={styles.productList}>
-        {products.map((product, index) => (
-          <div key={index} className={styles.product}>
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-          </div>
-        ))}
       </div>
       <Advantages />
       <Footer />

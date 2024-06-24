@@ -1,27 +1,27 @@
 @import "../Computers/Computers.module.scss";
 
 .comp {
-  @extend .comp !optional ;
+  @extend .comp !optional;
 
   .containerComp {
-    @extend .containerComp !optional ;
+    @extend .containerComp !optional;
 
     .foe {
-      @extend .foe !optional ;
+      @extend .foe !optional;
 
       .word {
-        @extend .word !optional ;
+        @extend .word !optional;
 
         h1 {
-          @extend h1 !optional ;
+          @extend h1 !optional;
         }
       }
 
       .picture {
-        @extend .picture !optional ;
+        @extend .picture !optional;
 
         img {
-          @extend img !optional ;
+          @extend img !optional;
         }
       }
     }
@@ -29,81 +29,81 @@
 }
 
 .categoryDropdown {
-  @extend .categoryDropdown !optional ;
+  @extend .categoryDropdown !optional;
 
   .containerAll {
-    @extend .containerAll !optional ;
+    @extend .containerAll !optional;
 
     .containerDown {
-      @extend .containerDown !optional ;
+      @extend .containerDown !optional;
 
       .categoryTitle {
-        @extend .categoryTitle !optional ;
+        @extend .categoryTitle !optional;
       }
 
       .down {
-        @extend .down !optional ;
+        @extend .down !optional;
       }
     }
 
     .dropdownMenu {
-      @extend .dropdownMenu !optional ;
+      @extend .dropdownMenu !optional;
 
       li {
-        @extend li !optional ;
+        @extend li !optional;
 
         a {
-          @extend a !optional ;
+          @extend a !optional;
         }
       }
     }
 
     .nav {
-      @extend .nav !optional ;
+      @extend .nav !optional;
 
       ul {
-        @extend ul !optional ;
+        @extend ul !optional;
 
         li {
-          @extend li !optional ;
+          @extend li !optional;
 
           a {
-            @extend a !optional ;
+            @extend a !optional;
           }
         }
       }
     }
 
     .endirimdeContainer {
-      @extend .endirimdeContainer !optional ;
+      @extend .endirimdeContainer !optional;
 
       .blankIcon {
-        @extend .blankIcon !optional ;
+        @extend .blankIcon !optional;
       }
 
       .checkIcon {
-        @extend .checkIcon !optional ;
+        @extend .checkIcon !optional;
       }
 
       .endirimdeText {
-        @extend .endirimdeText !optional ;
+        @extend .endirimdeText !optional;
       }
     }
   }
 }
 
 .productList {
-  @extend .productList !optional ;
+  @extend .productList !optional;
 
   .product {
-    @extend .product !optional ;
+    @extend .product !optional;
 
     h3 {
-      @extend h3 !optional ;
+      @extend h3 !optional;
     }
 
     p {
-      @extend p !optional ;
+      @extend p !optional;
     }
   }
 }

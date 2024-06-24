@@ -10,7 +10,6 @@
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
-
   .containerComp {
     width: 84%;
     display: flex;
@@ -18,6 +17,7 @@
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
+
     .foe {
       width: 100%;
       display: flex;
@@ -68,16 +68,45 @@
     width: 87%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding-bottom: 10px;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .search_btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    .search_btn button {
+      background-color: #D91D4B;
+      padding: 4px 18px;
+      border: none;
+      color: white;
+      font-size: 14px;
+      border-radius: 5px;
+      font-weight: 400;
+      font-family: 'Montserrat' sans-serif;
+    }
 
     .containerDown {
-      width: 15%;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: white;
       cursor: pointer;
-      padding: 5px;
+      padding: 15px;
+      position: relative;
+
       .categoryTitle {
         cursor: pointer;
         display: flex;
@@ -100,10 +129,10 @@
     }
 
     .dropdownMenu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 10;
+      // position: absolute;
+      // top: 100%;
+      // left: 0px;
+      // z-index: 10;
       background-color: #ffffff;
       list-style-type: none;
       padding: 10px;
@@ -111,13 +140,13 @@
       width: 200px;
       color: rgb(155, 154, 154);
       text-align: start;
-
       li {
         margin-bottom: 8px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         margin-left: 30px;
+
         a {
           text-decoration: none;
           color: rgb(71, 71, 71);
@@ -197,3 +226,12 @@
   }
 }
 
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  margin-left: 15px;
+}
