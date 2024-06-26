@@ -66,12 +66,12 @@ const Header = () => {
               </li>
               <li>
                 <a href="#" onClick={() => navigation("/Login")}>
-                  Login
+                  Daxil ol
                 </a>
               </li>
               <li>
                 <a href="#" onClick={() => navigation("/Register")}>
-                  Register
+                  Qeydiyyatdan keç
                 </a>
               </li>
             </ul>

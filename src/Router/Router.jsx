@@ -13,6 +13,10 @@ import Equipment from "../Pages/Equipment/Equipment";
 import Household from "../Pages/Household/Household";
 import Phones from "../Pages/Phones/Phones";
 import Others from "../Pages/Others/Others";
+import Success from "../Pages/Success/Success";
+import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
+import ResetPassword from "../Pages/ResetPassword/ResetPassword";
+import Dashboard from "../Components/Dashboard/Dashboard";
 
 const Router = () => {
   return (
@@ -32,6 +36,10 @@ const Router = () => {
           <Route path="/Household" element={<Household />} />
           <Route path="/Phones" element={<Phones />} />
           <Route path="/Others" element={<Others />} />
+          <Route path="/Success" element={<Success />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
