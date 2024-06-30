@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 600px;
+  background-color: #f9f9f9;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 87%;
+    margin-bottom: 40px;
+
+    .question {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+
+      h2 {
+        font-size: 23px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+        color: rgb(71, 71, 71);
+        line-height: 26px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .cardsWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+        color: white;
+        overflow: hidden;
+
+        &:nth-child(1) {
+          width: calc(66.66% - 10px);
+          height: calc((100vw / 3) - 160px);
+          margin-bottom: 10px;
+          position: relative;
+          z-index: 1;
+          p {
+            color: #e1859b;
+          }
+        }
+
+        &:nth-child(1) img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          width: calc(33.33% - 10px);
+          height: calc((100vw / 3) - 160px);
+          margin-top: 0;
+          text-align: center;
+        }
+
+        &:nth-child(2) p {
+          color: #e1859b;
+        }
+        &:nth-child(3) p ,
+        &:nth-child(4) p ,
+        &:nth-child(5) p{
+          color: #8a9fc0;
+        }
+        .text {
+          width: 90%;
+          padding-right: 20px;
+
+          h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          margin-bottom: -20px;
+        }
+      }
+    }
+  }
+}
