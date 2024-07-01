@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Dropdowns.module.scss';
+import axios from 'axios';
 
 const navItems = [
   { name: 'KOMPÜTERLƏR', icon: 'https://mstore.az/upload/category/desktop-computer.png', link: '/Computers' , dropdowns: [{ label: 'Masaüstü kompüterlər', link: '/page1' }, { label: 'Notebook və Netbooklar', link: '/page2' }, { label: 'MacBooklar', link: '/page3' }, { label: 'Monobloklar', link: '/page4' }] },
@@ -19,10 +20,21 @@ const Dropdowns = () => {
   const handleItemClick = (link) => {
     navigate(link);
   };
+// const [allCategories,setAllCategories ] = useState()
+//   const getCategories = async() => {
+// const res = await axios.get('http://localhost:5001/api/categories') 
+// console.log(res.data)
+// setAllCategories(res.data)
+
+//   }
+//   useEffect(() => { 
+//     getCategories()
+//   }, [])
+  
   return (
     <div className={styles.drops}>
       <div className={styles.containerDrops}>
-        {navItems.map((navItem, index) => (
+        {navItems.map((navItem, index) => ( 
           <div key={index} className={`${styles.navItem} ${navItem.name === 'DİGƏR' ? styles.digerNavItem : ''}`} onClick={() => handleItemClick(navItem.link)}>
             <img src={navItem.icon} alt={navItem.name} className={styles.navIcon} />
             {navItem.name}
@@ -34,7 +46,7 @@ const Dropdowns = () => {
               ))}
             </div>
           </div>
-        ))}
+         ))} 
       </div>
     </div>
   );

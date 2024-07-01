@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
-import Advantages from "../../Components/Advantages/Advantages";
 import styles from "./AboutUs.module.scss";
+import Dropdowns from "../../Components/Dropdowns/Dropdowns";
+import Advantages from "../../Components/Advantages/Advantages";
 const AboutUs = () => {
   return (
     <div>
       <Header />
+      <Dropdowns />
       <div className={styles.about}>
         <div className={styles.containerAbout}>
           <div className={styles.icons}>

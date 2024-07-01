@@ -8,8 +8,8 @@ const ForgotPassword = () => {
     const navigate = useNavigate();
 
     const handleSendCode = () => {
-        // Backend'e e-posta gönderme isteği yapın
-        // Bu kodu gerçek API çağrısı ile değiştirin
+        // Backend'e e-posta gönderme isteyi etmek
+        // Bu kodu gerçek API çağrısı ile deyiştirmek
         fetch('/api/send-verification-code', {
             method: 'POST',
             headers: {

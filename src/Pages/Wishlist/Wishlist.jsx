@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromWishlist, addToCart } from '../../Redux/WishlistSlice';
+import { removeFromWishlist, addToCart } from '../../Redux/Slices/WishlistSlice';
 import Header from '../../Components/Header/Header';
 import Dropdowns from '../../Components/Dropdowns/Dropdowns';
 import Footer from '../../Components/Footer/Footer';

@@ -11,8 +11,8 @@ const ResetPassword = () => {
     const [message, setMessage] = useState("");
 
     const handleResetPassword = () => {
-        // Backend'e parola sıfırlama isteği yapın
-        // Bu kodu gerçek API çağrısı ile değiştirin
+        // Backend'e parola sıfırlama isteği etmek
+        // Bu kodu gerçek API çağrısı ile deyistirmek
         fetch('/api/reset-password', {
             method: 'POST',
             headers: {

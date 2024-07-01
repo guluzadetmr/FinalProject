@@ -196,13 +196,11 @@ const Carousel = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000); 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
-    <div className={styles.carousel}>
+    <div className={styles.carousel}> 
       <div className={styles.containerCarousel}>
-
-     
       <div
         className={styles.carouselInner}
         style={{ transform: `translateX(-${currentIndex * (100 / 7)}%)` }}

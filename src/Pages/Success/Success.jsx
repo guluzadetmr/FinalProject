@@ -11,9 +11,9 @@ const Success = () => {
 
     return (
         <div className={styles.success}>
-            <h1>Registration Successful!</h1>
-            <p>Your account has been created successfully.</p>
-            <button onClick={handleGoHome}>Go to Home Page</button>
+            <h1>Qeydiyyat Uğurludur!</h1>
+            <p>Hesabınız uğurla yaradıldı.</p>
+            <button onClick={handleGoHome}>Ana Səhifəyə keçin</button>
         </div>
     );
 };

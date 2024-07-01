@@ -49,7 +49,7 @@ const Login = () => {
                     </div>
                     <div className={styles.pass}>
                         <h3>
-                            Hesabınız yoxdur? <a href="#">Qeydiyyatdan keç</a>
+                            Hesabınız yoxdur? <a href="/Register">Qeydiyyatdan keç</a>
                         </h3>
                         <a href="" onClick={() => navigate('/')}>Ana Səhifə</a>
                     </div>

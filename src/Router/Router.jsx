@@ -17,6 +17,8 @@ import Success from "../Pages/Success/Success";
 import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import Dashboard from "../Components/Dashboard/Dashboard";
+import ProfilePage from "../Pages/ProfilePage/ProfilePage";
+import ChangePasswordPage from "../Pages/ChangePassword/ChangePassword";
 
 const Router = () => {
   return (
@@ -40,6 +42,8 @@ const Router = () => {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/change-password" element={<ChangePasswordPage />} />
         </Routes>
       </BrowserRouter>
     </div>
