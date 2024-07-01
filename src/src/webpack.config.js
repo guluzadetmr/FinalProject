@@ -12,5 +12,5 @@ module.exports = {
       assert: require.resolve('assert/'),
     },
   },
-  // Diğer konfigürasyonlar, varsa
+ 
 };

@@ -12,15 +12,15 @@ const Register = () => {
     const [code, setCode] = useState("");
 
     const handleEmailSend = () => {
-        // Doğrulama kodunu email ile gönderme işlemi burada yapılmalı
-        // Bu örnekte sadece state'i değiştiriyoruz
-        // Gerçek uygulamada burada backend'e istek yapmanız gerekecek
+        // Doğrulama kodunu email ile gönderme işlemi burada edilmelidir
+        // Bu örnekte sadece state'i deyistiririk
+        // Gerçek uygulamada burada backend'e istek etmeliyem
         setEmailSent(true);
     };
 
     const handleRegister = () => {
-        // Doğrulama kodunu backend'e göndererek kontrol etme ve kayıt işlemi
-        // API çağrısı burada yapılmalı
+        // Doğrulama kodunu backend'e göndererek kontrol etme ve qeyd olma  prosesi
+        // API çağrısı burada etmeliyem
         const registrationData = {
             username,
             email,
@@ -29,10 +29,10 @@ const Register = () => {
             code
         };
 
-        // Burada bir API isteği yaparak kayıt işlemi gerçekleştirilmeli
-        // Bu örnekte sadece navigate işlemi var, gerçek uygulamada API isteği ve yanıt kontrolü olmalı
+        // Burda bir API isteği edib kayıt işlemi etmeliyem
+        // Burda navigate işlemi var, gerçek uygulamada API isteği ve req almaq
         console.log(registrationData);
-        // API isteği başarılı olursa navigate işlemi yapılmalı
+        // API isteği başarılı olursa navigate işlemi etmeliyem
         navigate("/success");
     };
 

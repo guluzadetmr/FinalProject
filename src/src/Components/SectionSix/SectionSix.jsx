@@ -8,7 +8,7 @@ const SectionSix = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Backend'den "Mobil Telefonlar" kategorisine ait ürünleri çekin
+    // Backend'den "Mobil Telefonlar" kategorisine ait ürünleri çekmek
     axios.get('/api/products?category=Mobil Telefonlar')
       .then(response => {
         setProducts(response.data);

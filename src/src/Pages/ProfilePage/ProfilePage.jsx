@@ -1,34 +1,3 @@
-// import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { updateProfilePicture } from '../redux/AuthSlice';
-
-// const ProfilePage = () => {
-//   const dispatch = useDispatch();
-//   const user = useSelector((state) => state.auth.user);
-
-//   const handleProfilePictureChange = (e) => {
-//     const file = e.target.files[0];
-//     // Handle file upload and dispatch action to update profile picture
-//     dispatch(updateProfilePicture(file));
-//   };
-
-//   return (
-//     <div>
-//       <h1>Profile</h1>
-//       <div>
-//         <img src={user?.profilePicture || '/path/to/default/avatar.jpg'} alt="Profile" />
-//         <input type="file" onChange={handleProfilePictureChange} />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProfilePage;
-
-
-
-
-
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';

@@ -8,7 +8,7 @@ const SectionThree = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Backend'den "Kompüterlər" kategorisine ait ürünleri çekin
+    // Backend'den "Kompüterlər" kategorisine ait ürünleri çekmek
     axios.get('/api/products?category=Kompüter hissələri')
       .then(response => {
         setProducts(response.data);

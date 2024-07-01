@@ -20,7 +20,7 @@ const Home = () => {
   const [popularProducts, setPopularProducts] = useState([]);
 
   useEffect(() => {
-    // Yeni ürünleri ve popüler ürünleri backend'den fetch edin
+    // Yeni ürünleri ve popüler ürünleri backend'den fetch etmek
     fetch('/api/new-products')
       .then(response => response.json())
       .then(data => setNewProducts(data));

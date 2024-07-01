@@ -11,7 +11,7 @@ body {
 
 .last {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-height: 215px;
   background-color: #474747;
@@ -123,6 +123,129 @@ body {
       }
 
 
+    }
+  }
+}
+@media screen and (min-width:300px) and (max-width:576px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 215px;
+    background-color: #474747;
+  
+    .containerlast {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+  
+      .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 30%;
+        text-align: start;
+        padding: 20px;
+        gap: 10px;
+  
+        .text {
+          width: 100%;
+  
+          img {
+            width: 100%;
+            position: 70px;
+  
+          }
+        }
+  
+        h3 {
+          font-family: "Montserrat" sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          color: #bababa;
+          width: 100%;
+        }
+      }
+  
+      .middle {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: 30px;
+        margin-top: -40px;
+        gap: 15px;
+  
+        h4 {
+          font-family: "Montserrat" sans-serif;
+          font-size: 15px;
+          font-weight: 600;
+          color: white;
+          width: 60%;
+        }
+  
+        p {
+          font-family: "Montserrat" sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          color: #bababa;
+          width: 60%;
+        }
+      }
+  
+      .right {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+  
+        h4 {
+          font-family: "Montserrat" sans-serif;
+          font-size: 15px;
+          font-weight: 500;
+          color: white;
+          width: 60%;
+          color: white;
+          display: flex;
+        }
+  
+        .numbers {
+          display: flex;
+          flex-direction: column;
+  
+          span {
+            font-family: "Montserrat" sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            color: #bababa;
+            width: 100%;
+            display: flex;
+  
+          }
+        }
+  
+        p {
+          color: #bababa;
+          font-family: "Montserrat" sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          text-align: start;
+          display: flex;
+        }
+  
+  
+      }
     }
   }
 }

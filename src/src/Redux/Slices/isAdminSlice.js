@@ -1,7 +1,6 @@
-// src/redux/Slices/isAdminSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = false; // Başlangıç durumu false olarak ayarlanabilir
+const initialState = false; // Başlangıç durumu false olarak ayarlana biler
 
 const isAdminSlice = createSlice({
   name: 'isAdmin',

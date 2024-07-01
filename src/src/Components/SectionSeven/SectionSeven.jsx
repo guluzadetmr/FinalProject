@@ -8,7 +8,7 @@ const SectionSeven = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Backend'den "Digər" kategorisine ait ürünleri çekin
+    // Backend'den "Digər" kategorisine ait ürünleri çekmek
     axios.get('/api/products?category=Digər')
       .then(response => {
         setProducts(response.data);
