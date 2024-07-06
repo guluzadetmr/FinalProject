@@ -20,16 +20,16 @@ const Dropdowns = () => {
   const handleItemClick = (link) => {
     navigate(link);
   };
-// const [allCategories,setAllCategories ] = useState()
-//   const getCategories = async() => {
-// const res = await axios.get('http://localhost:5001/api/categories') 
-// console.log(res.data)
-// setAllCategories(res.data)
+const [allCategories,setAllCategories ] = useState()
+  const getCategories = async() => {
+const res = await axios.get('http://localhost:5001/api/categories') 
+console.log(res.data)
+setAllCategories(res.data)
 
-//   }
-//   useEffect(() => { 
-//     getCategories()
-//   }, [])
+  }
+  useEffect(() => { 
+    getCategories()
+  }, [])
   
   return (
     <div className={styles.drops}>

@@ -1,43 +1,42 @@
 .card {
-    background-color: white;
-    padding: 10px;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  .card_img {
+    height: 180px;
+    background-color: red;
 
-    .card_img {
-        height: 180px;
-        background-color: red;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+  .card_content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    margin-top: 10px;
+
+    .card_title {
+      color: gray;
+      font-size: 14px;
     }
 
-    .card_content {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        text-align: center;
-        margin-top: 10px;
-
-        .card_title {
-            color: gray;
-            font-size: 14px;
-        }
-
-        .card_desc {
-            font-weight: 600;
-        }
-
-        .card_price {
-            display: flex;
-            flex-direction: column;
-
-            span {
-                font-size: 28px;
-                font-weight: 600;
-            }
-        }
-
+    .card_desc {
+      font-weight: 600;
     }
+
+    .card_price {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 28px;
+        font-weight: 600;
+      }
+    }
+  }
 }

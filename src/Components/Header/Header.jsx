@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { FaSearch, FaRegUser } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { fetchCartItems, fetchUserProfile } from '../../Redux/Actions';
